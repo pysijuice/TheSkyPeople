@@ -53,15 +53,27 @@ public class TerrainChunk {
 		meshScript = meshObject.AddComponent<TestScript>();
 		// islandPrefabs = GameObject.GetComponent<TerrainGenerator>.objects;
 		islandPrefabs = GameObject.Find("Map Generator").GetComponent<TerrainGenerator>().objects;
-		meshChild = GameObject.Instantiate(islandPrefabs[0],new Vector3(0,0,0), new Quaternion(0,0,0,0));
-	
-		
-		meshChild.transform.parent = meshObject.transform;
+		// meshChild = GameObject.Instantiate(islandPrefabs[0],new Vector3(0,150,0), new Quaternion(0,0,0,0));
 		//end of trash
 		meshRenderer.material = material;
 
 		meshObject.transform.position = new Vector3(position.x,0,position.y);
+		meshChild = GameObject.Instantiate(islandPrefabs[0],new Vector3(position.x,50,position.y), new Quaternion(0,0,0,0));
 		
+		Debug.Log(meshChild.transform.position + " " + meshObject.transform.position);
+		// RaycastHit hit;
+        // // if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit, Mathf.Infinity))
+        // if (Physics.Raycast(meshChild.transform.position, -meshChild.transform.up, out hit, Mathf.Infinity))
+        // {
+        //     Debug.DrawRay(meshChild.transform.position, meshChild.transform.TransformDirection(Vector3.up) * 1000, Color.yellow,100);
+        //     // Debug.Log("Did Hit " + meshChild.transform.position);
+        // }
+		// else{
+		// 	Debug.DrawRay(meshChild.transform.position, meshChild.transform.TransformDirection(Vector3.up) * 1000, Color.red,100);
+		// 	// Debug.Log("Didnt Hit " + meshChild.transform.position);
+		// }
+		meshChild.transform.parent = meshObject.transform;
+		//end of trash
 		meshObject.transform.parent = parent;
 		SetVisible(false);
 
@@ -72,11 +84,15 @@ public class TerrainChunk {
 			if (i == colliderLODIndex) {
 				lodMeshes[i].updateCallback += UpdateCollisionMesh;
 			}
+			lodMeshes[i].updateCallback += UpdateCollisionMesh;
 		}
 
 		maxViewDst = detailLevels [detailLevels.Length - 1].visibleDstThreshold;
 
 	}
+	//trash
+	
+	//end trash
 
 	public void Load() {
 		ThreadedDataRequester.RequestData(() => HeightMapGenerator.GenerateHeightMap (meshSettings.numVertsPerLine, meshSettings.numVertsPerLine, heightMapSettings, sampleCentre), OnHeightMapReceived);
@@ -121,6 +137,7 @@ public class TerrainChunk {
 					if (lodMesh.hasMesh) {
 						previousLODIndex = lodIndex;
 						meshFilter.mesh = lodMesh.mesh;
+						meshCollider.sharedMesh = lodMesh.mesh;
 					} else if (!lodMesh.hasRequestedMesh) {
 						lodMesh.RequestMesh (heightMap, meshSettings);
 					}

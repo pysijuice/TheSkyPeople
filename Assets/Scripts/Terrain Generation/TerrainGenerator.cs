@@ -36,6 +36,7 @@ public class TerrainGenerator : MonoBehaviour {
 		textureSettings.UpdateMeshHeights (mapMaterial, heightMapSettings.minHeight, heightMapSettings.maxHeight);
 
 		float maxViewDst = detailLevels [detailLevels.Length - 1].visibleDstThreshold;
+		
 		meshWorldSize = meshSettings.meshWorldSize;
 		chunksVisibleInViewDst = Mathf.RoundToInt(maxViewDst / meshWorldSize);
 
@@ -61,8 +62,8 @@ public class TerrainGenerator : MonoBehaviour {
 	void UpdateVisibleChunks() {
 		
 		HashSet<Vector2> alreadyUpdatedChunkCoords = new HashSet<Vector2> ();
-		for (int i = visibleTerrainChunks.Count-8; i >= 0; i--) {
-		// for (int i = 2-1; i >= 0; i--) {
+		for (int i = visibleTerrainChunks.Count-1; i >= 0; i--) {
+		
 			alreadyUpdatedChunkCoords.Add (visibleTerrainChunks [i].coord);
 			visibleTerrainChunks [i].UpdateTerrainChunk ();
 		}
