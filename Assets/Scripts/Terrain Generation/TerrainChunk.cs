@@ -14,9 +14,9 @@ public class TerrainChunk {
 	MeshFilter meshFilter;
 	MeshCollider meshCollider;
 	//trash
-	TestScript meshScript;
 	GameObject meshChild;
 	GameObject[] islandPrefabs;
+	
 	//end of trash
 	LODInfo[] detailLevels;
 	LODMesh[] lodMeshes;
@@ -31,6 +31,8 @@ public class TerrainChunk {
 	HeightMapSettings heightMapSettings;
 	MeshSettings meshSettings;
 	Transform viewer;
+
+
 
 	public TerrainChunk(Vector2 coord, HeightMapSettings heightMapSettings, MeshSettings meshSettings, LODInfo[] detailLevels, int colliderLODIndex, Transform parent, Transform viewer, Material material) {
 		this.coord = coord;

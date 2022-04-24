@@ -14,6 +14,10 @@ public class TerrainGenerator : MonoBehaviour {
 	public MeshSettings meshSettings;
 	public HeightMapSettings heightMapSettings;
 	public TextureData textureSettings;
+	//trash
+
+	// public TextureData textureSettingsTest;
+	//end of trash
 
 	public Transform viewer;
 	public Material mapMaterial;
@@ -31,7 +35,10 @@ public class TerrainGenerator : MonoBehaviour {
 	List<TerrainChunk> visibleTerrainChunks = new List<TerrainChunk>();
 
 	void Start() {
-
+		//trash
+		textureSettings = GetComponent<TextureDataRandomiser>().giveTexture();
+		// texture.RandomBiome();
+		//end of trash
 		textureSettings.ApplyToMaterial (mapMaterial);
 		textureSettings.UpdateMeshHeights (mapMaterial, heightMapSettings.minHeight, heightMapSettings.maxHeight);
 

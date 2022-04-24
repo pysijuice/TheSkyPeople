@@ -25,9 +25,14 @@ public class MapPreview : MonoBehaviour {
 	public bool autoUpdate;
 
 
-
+	public void Start(){
+		textureData = GetComponent<TextureDataRandomiser>().giveTexture();
+	}
 
 	public void DrawMapInEditor() {
+		//trash
+		// textureData = GetComponent<TextureDataRandomiser>().giveTexture();
+		//end of trash
 		textureData.ApplyToMaterial (terrainMaterial);
 		textureData.UpdateMeshHeights (terrainMaterial, heightMapSettings.minHeight, heightMapSettings.maxHeight);
 		HeightMap heightMap = HeightMapGenerator.GenerateHeightMap (meshSettings.numVertsPerLine, meshSettings.numVertsPerLine, heightMapSettings, Vector2.zero);
