@@ -43,37 +43,19 @@ public class TerrainChunk {
 		sampleCentre = coord * meshSettings.meshWorldSize / meshSettings.meshScale;
 		Vector2 position = coord * meshSettings.meshWorldSize ;
 		bounds = new Bounds(position,Vector2.one * meshSettings.meshWorldSize );
-
+		Debug.Log(meshSettings.meshWorldSize);
 
 		meshObject = new GameObject("Terrain Chunk");
 		meshRenderer = meshObject.AddComponent<MeshRenderer>();
 		meshFilter = meshObject.AddComponent<MeshFilter>();
 		meshCollider = meshObject.AddComponent<MeshCollider>();
-		//trash
-		meshScript = meshObject.AddComponent<TestScript>();
-		// islandPrefabs = GameObject.GetComponent<TerrainGenerator>.objects;
+		// meshScript = meshObject.AddComponent<TestScript>();
 		islandPrefabs = GameObject.Find("Map Generator").GetComponent<TerrainGenerator>().objects;
-		// meshChild = GameObject.Instantiate(islandPrefabs[0],new Vector3(0,150,0), new Quaternion(0,0,0,0));
-		//end of trash
 		meshRenderer.material = material;
-
 		meshObject.transform.position = new Vector3(position.x,0,position.y);
-		meshChild = GameObject.Instantiate(islandPrefabs[0],new Vector3(position.x,50,position.y), new Quaternion(0,0,0,0));
-		
-		Debug.Log(meshChild.transform.position + " " + meshObject.transform.position);
-		// RaycastHit hit;
-        // // if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit, Mathf.Infinity))
-        // if (Physics.Raycast(meshChild.transform.position, -meshChild.transform.up, out hit, Mathf.Infinity))
-        // {
-        //     Debug.DrawRay(meshChild.transform.position, meshChild.transform.TransformDirection(Vector3.up) * 1000, Color.yellow,100);
-        //     // Debug.Log("Did Hit " + meshChild.transform.position);
-        // }
-		// else{
-		// 	Debug.DrawRay(meshChild.transform.position, meshChild.transform.TransformDirection(Vector3.up) * 1000, Color.red,100);
-		// 	// Debug.Log("Didnt Hit " + meshChild.transform.position);
-		// }
-		meshChild.transform.parent = meshObject.transform;
-		//end of trash
+		// meshChild = GameObject.Instantiate(islandPrefabs[0],new Vector3(position.x,50,position.y), new Quaternion(0,0,0,0));
+		// meshChild.transform.parent = meshObject.transform;
+		GenerateIslands(position.x,position.y,meshSettings.meshWorldSize);
 		meshObject.transform.parent = parent;
 		SetVisible(false);
 
@@ -90,9 +72,22 @@ public class TerrainChunk {
 		maxViewDst = detailLevels [detailLevels.Length - 1].visibleDstThreshold;
 
 	}
-	//trash
-	
-	//end trash
+	public void GenerateIslands(float chunkX, float chunkY, float size){
+		for (float x = chunkX-size/2; x < chunkX+size/2; x+= size/5){
+			for (float y = chunkY-size/2; y < chunkY+size/2; y+= size/5){
+				meshChild = GameObject.Instantiate(islandPrefabs[0],new Vector3(x,50,y), new Quaternion(0,0,0,0));
+				meshChild.transform.parent = meshObject.transform;
+			}
+		}
+		// for (float x1 = 1; x1 < 5; x1+= 1 ){
+		// 	for (float y1 = 1; y1 < 5; y1+= 1 ){
+		// 		float x = x1 * (size/5);
+		// 		float y = y1 * (size/5);
+		// 		meshChild = GameObject.Instantiate(islandPrefabs[0],new Vector3(x+chunkX,50,y+chunkY), new Quaternion(0,0,0,0));
+		// 		meshChild.transform.parent = meshObject.transform;
+		// 	}
+		// }
+	}
 
 	public void Load() {
 		ThreadedDataRequester.RequestData(() => HeightMapGenerator.GenerateHeightMap (meshSettings.numVertsPerLine, meshSettings.numVertsPerLine, heightMapSettings, sampleCentre), OnHeightMapReceived);

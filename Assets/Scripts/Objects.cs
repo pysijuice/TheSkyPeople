@@ -18,7 +18,7 @@ public class Objects : MonoBehaviour
 
     public void FindLand()
     {
-        coroutine = checkCollide(1.0f);
+        coroutine = checkCollide(0.5f);
         StartCoroutine(coroutine);
     }
     IEnumerator checkCollide(float waitTime)
