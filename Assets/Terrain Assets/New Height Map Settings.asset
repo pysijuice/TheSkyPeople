@@ -19,16 +19,16 @@ MonoBehaviour:
     octaves: 3
     persistance: 0.5
     lacunarity: 3.15
-    seed: 28
+    seed: 1
     offset: {x: 0, y: 0}
   useFalloff: 1
-  heightMultiplier: 250
+  heightMultiplier: 350
   heightCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.003955841
-      value: -0.07546997
+      time: 0.012256622
+      value: -0.21820068
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -36,8 +36,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.33474633
-      value: -0.06196337
+      time: 0.32229516
+      value: -0.21259813
       inSlope: 0.2432131
       outSlope: 0.2432131
       tangentMode: 0
