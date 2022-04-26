@@ -74,28 +74,28 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _Base_Scale: 0.003
-    - _Base_Speed: 29.97
+    - _Base_Scale: 0.03
+    - _Base_Speed: 8
     - _Base_Strength: 1.5
     - _BumpScale: 1
-    - _Curvatue_Radius: 250
+    - _Curvatue_Radius: 412.69
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _Emission_Strength: 2
     - _Fresnel_Opacity: 1
-    - _Fresnel_Power: 8
+    - _Fresnel_Power: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
-    - _Noise_Edge_1: -0.24
-    - _Noise_Edge_2: 1.66
+    - _Noise_Edge_1: -0.4
+    - _Noise_Edge_2: 0.9
     - _Noise_Height: 35.47
-    - _Noise_Power: 0.9
+    - _Noise_Power: -0.05
     - _Noise_Scale: 0.03
-    - _Noise_Speed: 10
+    - _Noise_Speed: 24.33
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
@@ -105,8 +105,8 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color_Peak: {r: 0.745283, g: 0.63630295, b: 0.63630295, a: 0}
-    - _Color_Valley: {r: 0.6490744, g: 0.735849, b: 0.735849, a: 0}
+    - _Color_Peak: {r: 0.48235297, g: 0.4901961, b: 0.6509804, a: 0}
+    - _Color_Valley: {r: 0.19215688, g: 0.5529412, b: 0.7058824, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Noise_Remap: {r: -0.24, g: 0.96, b: -1.6, a: 0.61}
     - _Rotate_Projection: {r: 1, g: 0, b: 0, a: 90}
