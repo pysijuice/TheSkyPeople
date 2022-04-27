@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interactable Object
   - Island
+  - AirShip
   layers:
   - Default
   - TransparentFX

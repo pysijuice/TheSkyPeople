@@ -10,7 +10,7 @@ public class AirshipTest : MonoBehaviour
 
     //visible Properties
     public float rotationSpeed;
-    public Transform motor; 
+    public Transform motor;
     public float SteerPower = 500f;
     public float Power = 5f;
     public float MaxSpeed = 10f;
@@ -35,66 +35,81 @@ public class AirshipTest : MonoBehaviour
     {
         Rigidbody = GetComponent<Rigidbody>();
         StartRotation = motor.localRotation;
-        Transform zepTransform = gameObject.GetComponent<Transform>(); 
-        Physics.gravity = new Vector3(0,0,0);
-        
+        Transform zepTransform = gameObject.GetComponent<Transform>();
+        Physics.gravity = new Vector3(0, 0, 0);
+
     }
 
-    void Update(){
+    void Update()
+    {
         upDownInput = Input.GetAxis("ShipUp");
         steer = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
         brakeInput = Input.GetAxis("Jump");
-        
+
 
         if (Input.GetButtonDown("Vertical"))
         {
-            if (Input.GetAxisRaw("Vertical")>0){
+            if (Input.GetAxisRaw("Vertical") > 0)
+            {
                 moveForward += 0.25f;
                 if (moveForward > 1)
                 {
                     moveForward = 1;
-                } 
+                }
                 Debug.Log(moveForward);
             }
-            else{
+            else
+            {
                 moveForward -= 0.25f;
                 if (moveForward < -1)
                 {
                     moveForward = -1;
-                } 
+                }
                 Debug.Log(moveForward);
             }
         }
     }
     void FixedUpdate()
-    {   
+    {
         //default direction
         var forceDirection = transform.forward;
-        var forward = Vector3.Scale(new Vector3(1,1,1), -transform.right);
+        var forward = Vector3.Scale(new Vector3(1, 1, 1), -transform.right);
         //upDown
-        transform.Rotate(new Vector3(0,0,Time.deltaTime*upDownInput*100/upDownCoef),Space.Self);
-        
+        transform.Rotate(new Vector3(0, 0, Time.deltaTime * upDownInput * 100 / upDownCoef), Space.Self);
+
         // //leftRight
 
-        Rigidbody.AddForceAtPosition(-Time.deltaTime*steer * transform.forward * SteerPower / 100f, motor.position);
-        Rigidbody.AddForce(transform.forward*steer*2, ForceMode.Force);
-        Rigidbody.AddForceAtPosition(Time.deltaTime*steer * transform.forward * SteerPower / 200f, motor.position, ForceMode.Force);
+        Rigidbody.AddForceAtPosition(-Time.deltaTime * steer * transform.forward * SteerPower / 100f, motor.position);
+        Rigidbody.AddForce(transform.forward * steer * 2, ForceMode.Force);
+        Rigidbody.AddForceAtPosition(Time.deltaTime * steer * transform.forward * SteerPower / 200f,
+        motor.position, ForceMode.Force);
 
         //forwardBack
         PhysicsHelper.ApplyForceToReachVelocity(Rigidbody, forward * MaxSpeed * moveForward, Power);
 
         //brake
-        Rigidbody.AddForce(-brakeInput*5 * Rigidbody.velocity);
+        Rigidbody.AddForce(-brakeInput * 5 * Rigidbody.velocity);
         Rigidbody.AddForce(-0.7f * Rigidbody.velocity);
 
-        if (transform.eulerAngles.x <180){
-            transform.Rotate(transform.right * rotationSpeed * Time.deltaTime  * -1 * passiveCrenCoef,Space.World);
-        } else if (transform.eulerAngles.x > 180){
-            transform.Rotate(transform.right * rotationSpeed * Time.deltaTime * passiveCrenCoef, Space.World);
-           
+        if (transform.eulerAngles.x < 180)
+        {
+            if (transform.eulerAngles.x > 25)
+            {
+                transform.Rotate(-transform.right * rotationSpeed * Time.deltaTime * passiveCrenCoef * 5, Space.World);
+            }
+            transform.Rotate(transform.right * rotationSpeed * Time.deltaTime * -1 * passiveCrenCoef, Space.World);
         }
-        
+        else if (transform.eulerAngles.x > 180)
+        {
+            if (transform.eulerAngles.x < 25)
+            {
+                transform.Rotate(transform.right * rotationSpeed * Time.deltaTime * passiveCrenCoef * 5, Space.World);
+            }
+            transform.Rotate(transform.right * rotationSpeed * Time.deltaTime * passiveCrenCoef, Space.World);
+
+        }
+
     }
-   
+
 }
