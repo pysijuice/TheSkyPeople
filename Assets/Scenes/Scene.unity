@@ -1326,9 +1326,12 @@ MonoBehaviour:
   zRange: 100
   xRange: 200
   howFarFromPlayer: 100
-  timeDelay: 0.0625
+  timeDelay: 0.05
   winds:
-  - {fileID: 2928446828269872578, guid: 3905db4e570eac74c801c06dd238d15f, type: 3}
+  - {fileID: 2928446828269872578, guid: aa0bb160decc09545abca51c22ad32d4, type: 3}
+  - {fileID: 2928446828269872578, guid: 5fd4a996606c54147b29bdff64e13dbe, type: 3}
+  - {fileID: 2928446828269872578, guid: 90121024ff4fcc4469b252f6aa023a8e, type: 3}
+  - {fileID: 2928446828269872578, guid: 6e2cd8805ca3b164b94b4decf7220ce4, type: 3}
   stars: []
 --- !u!1 &1595749553
 GameObject:
