@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ditzelgames;
+using Photon.Pun;
 
 
 [RequireComponent(typeof(Rigidbody))]
@@ -22,6 +23,7 @@ public class AirshipTest : MonoBehaviour
 
 
 
+
     private float moveForward = 0;
 
     //use Componets
@@ -33,6 +35,7 @@ public class AirshipTest : MonoBehaviour
     float brakeInput;
     void Start()
     {
+
         Rigidbody = GetComponent<Rigidbody>();
         StartRotation = motor.localRotation;
         Transform zepTransform = gameObject.GetComponent<Transform>();
