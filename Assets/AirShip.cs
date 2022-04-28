@@ -18,7 +18,7 @@ public class AirShip : MonoBehaviour
     {
 
         airShip = GameObject.Find("Speed_Boat");
-        player = GameObject.Find("Player(Clone)");
+        player = GameObject.Find("Player");
 
         rb2 = airShip.GetComponent<Rigidbody>();
 
@@ -28,23 +28,16 @@ public class AirShip : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player");
+        if (other.tag == "Player")
         {
             rb1 = player.GetComponent<CharacterController>();
         }
    
     }
 
-    private void Update()
-    {
-
-       
-
-    }
-
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" )
         {
             rb1.Move(rb2.velocity * Time.deltaTime);
         }

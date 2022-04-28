@@ -16,7 +16,7 @@ public class TakeControll : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player(Clone)");
+        player = GameObject.Find("Player");
 
         ShipController.enabled = false;
     }
@@ -27,22 +27,28 @@ public class TakeControll : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.F) && isPlayerEnter)
         {
-            isPlayerEnter = false;
+            isPlayerEnter = !isPlayerEnter;
 
-            player.gameObject.GetComponent<PlayerController>().enabled = false;
-            player.gameObject.GetComponent<PlayerMovement>().enabled = false;
+            player.gameObject.GetComponent <PlayerMovement>().enabled = false;
+            player.gameObject.GetComponent<CharacterController>().enabled = false;
 
+
+            player.transform.parent = transform;
             ShipController.enabled = true;
         }
         else if (Input.GetKeyDown(KeyCode.F) && !isPlayerEnter)
         {
-            isPlayerEnter = true;
+            isPlayerEnter = !isPlayerEnter;
 
-            player.gameObject.GetComponent<PlayerController>().enabled = true;
             player.gameObject.GetComponent<PlayerMovement>().enabled = true;
+            player.gameObject.GetComponent<CharacterController>().enabled = true;
+
 
             player.transform.parent = null;
             ShipController.enabled = false;
+
+
+
         }
     }
 
