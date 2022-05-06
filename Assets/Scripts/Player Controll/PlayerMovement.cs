@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
     
 
     private float hp = 1;
-    public Scrollbar ScrollbarHP;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -80,25 +79,4 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
-    
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Enemy")
-        {
-            hp -= 0.2f;
-
-            ScrollbarHP.size = hp;
-
-            if (hp <= 0f)
-            {
-                Death();
-            }
-        }
-    }
-
-    private void Death()
-    {
-        Destroy(gameObject);
-    }
 }
