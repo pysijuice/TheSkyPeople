@@ -414,6 +414,7 @@ MonoBehaviour:
   speed: 6
   gravity: -9.81
   jumpHeight: 2
+  ScrollbarHP: {fileID: 0}
   groundCheck: {fileID: 4740916977257873582}
   groundDistance: 0.4
   groundMask:
@@ -435,6 +436,9 @@ MonoBehaviour:
   scriptPlayerController: {fileID: 5507040716985085754}
   scriptPlayerMovement: {fileID: 4740916976520871772}
   scriptMouseLook: {fileID: 4740916977624119650}
+  ScrollbarHP: {fileID: 0}
+  ScrollbarFood: {fileID: 0}
+  ScrollbarWater: {fileID: 0}
 --- !u!95 &143976618
 Animator:
   serializedVersion: 4
@@ -513,8 +517,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4740916977624119652}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.666, y: 4.142, z: 1.761}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.666, y: 4.143509, z: 1.3595421}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
