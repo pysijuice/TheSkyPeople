@@ -17,7 +17,9 @@ public class MapPreview : MonoBehaviour {
 	
 
 	public Material terrainMaterial;
+	
 
+	private int seed = 0;
 
 
 	[Range(0,MeshSettings.numSupportedLODs-1)]
@@ -27,6 +29,7 @@ public class MapPreview : MonoBehaviour {
 
 	public void Start(){
 		textureData = GetComponent<TextureDataRandomiser>().giveTexture();
+		// seed = Random.Range(-1000,1000);
 	}
 
 	public void DrawMapInEditor() {

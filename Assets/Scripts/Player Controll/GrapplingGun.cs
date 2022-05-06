@@ -75,6 +75,8 @@ public class GrapplingGun : MonoBehaviour {
     /// Call whenever we want to stop a grapple
     /// </summary>
     void StopGrapple() {
+        if (!joint) return;
+        player.position = camera.position;
         lr.positionCount = 0;
         Destroy(joint);
         playerMV.enabled = true;
