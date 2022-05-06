@@ -10,7 +10,9 @@ public class PlayerMovement : MonoBehaviour
 
     public float speed = 12f;
     public float gravity = -9.81f;
+    public float yMaxVelocity;
     public float jumpHeight = 3f;
+    
 
     private float hp = 1;
     public Scrollbar ScrollbarHP;
@@ -70,6 +72,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
         velocity.y += gravity * Time.deltaTime;
+        if (velocity.y < yMaxVelocity){
+            velocity.y = yMaxVelocity;
+        }
 
         controller.Move(velocity * Time.deltaTime);
     }
