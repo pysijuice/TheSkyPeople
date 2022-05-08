@@ -57,7 +57,7 @@ public class TerrainChunk {
 		meshObject.transform.position = new Vector3(position.x,0,position.y);
 		// meshChild = GameObject.Instantiate(islandPrefabs[0],new Vector3(position.x,50,position.y), new Quaternion(0,0,0,0));
 		// meshChild.transform.parent = meshObject.transform;
-		GenerateIslands(position.x,position.y,meshSettings.meshWorldSize);
+		// GenerateIslands(position.x,position.y,meshSettings.meshWorldSize);
 		meshObject.transform.parent = parent;
 		SetVisible(false);
 
