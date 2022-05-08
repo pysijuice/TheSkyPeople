@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AirShip : MonoBehaviour
 {
-    private GameObject airShip;
+    [SerializeField] private GameObject airShip;
     private GameObject player;
 
 
@@ -17,7 +17,6 @@ public class AirShip : MonoBehaviour
     void Start()
     {
 
-        airShip = GameObject.Find("Speed_Boat");
         player = GameObject.Find("Player");
 
         rb2 = airShip.GetComponent<Rigidbody>();

@@ -1687,6 +1687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pressFText: {fileID: 5289260}
+  gameObjectTypeArray: []
 --- !u!1001 &2511182263786168641
 PrefabInstance:
   m_ObjectHideFlags: 0

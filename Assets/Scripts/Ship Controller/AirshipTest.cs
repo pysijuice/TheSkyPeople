@@ -19,8 +19,7 @@ public class AirshipTest : MonoBehaviour
     public float upDownCoef;
     public float passiveCrenCoef;
 
-
-
+    [SerializeField] private GameObject wheelHandle;
 
 
 
@@ -45,6 +44,7 @@ public class AirshipTest : MonoBehaviour
 
     void Update()
     {
+        RotateWheel();
         upDownInput = Input.GetAxis("ShipUp");
         steer = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
@@ -113,6 +113,17 @@ public class AirshipTest : MonoBehaviour
 
         }
 
+    }
+
+    void RotateWheel()
+    {
+        if (Input.GetKey(KeyCode.A))
+        {
+            wheelHandle.transform.Rotate(0, 0, 50 * Time.deltaTime);
+        } else if (Input.GetKey(KeyCode.D))
+        {
+            wheelHandle.transform.Rotate(0, 0, -50 * Time.deltaTime);
+        }
     }
 
 }
