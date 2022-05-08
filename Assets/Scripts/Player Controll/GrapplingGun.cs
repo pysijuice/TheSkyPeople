@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class GrapplingGun : MonoBehaviour {
 
@@ -11,6 +12,8 @@ public class GrapplingGun : MonoBehaviour {
     Rigidbody playerRB;
     PlayerMovement playerMV;
     public GameObject attachPlayerTwice;
+    //coroutine
+    private IEnumerator coroutine;
 
     void Awake() {
         lr = GetComponent<LineRenderer>();
@@ -54,15 +57,15 @@ public class GrapplingGun : MonoBehaviour {
             float distanceFromPoint = Vector3.Distance(player.position, grapplePoint);
 
             //The distance grapple will try to keep from grapple point. 
-            // joint.maxDistance = distanceFromPoint * 0.8f;
-            // joint.minDistance = distanceFromPoint * 0.25f;
+            joint.maxDistance = distanceFromPoint * 0.3f;
+            joint.minDistance = distanceFromPoint * 0.18f;
 
             //Adjust these values to fit your game.
-            // joint.spring = 4.5f;
-            // joint.damper = 7f;
-            // joint.massScale = 4.5f;
-            joint.spring = 100f;
-            joint.damper = 100f;
+            joint.spring = 10f;
+            joint.damper = 14f;
+            joint.massScale = 4.5f;
+            // joint.spring = 100f;
+            // joint.damper = 100f;
             // joint.massScale = 4.5f;
 
             lr.positionCount = 2;
@@ -76,7 +79,7 @@ public class GrapplingGun : MonoBehaviour {
     /// </summary>
     void StopGrapple() {
         if (!joint) return;
-        player.position = camera.position;
+        // player.position = new Vector3(camera.position.x, camera.position.y-0.3f,camera.position.z);
         lr.positionCount = 0;
         Destroy(joint);
         playerMV.enabled = true;
