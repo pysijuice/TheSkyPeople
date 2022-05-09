@@ -15,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     public GameObject camera;
     
 
-    private float hp = 1;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
