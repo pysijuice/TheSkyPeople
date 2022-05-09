@@ -14,19 +14,41 @@ public class GrapplingGun : MonoBehaviour {
     public GameObject attachPlayerTwice;
     //coroutine
     private IEnumerator coroutine;
+    //Check for collide
+    private bool isNearCollide = false;
+    RaycastHit checkForCollide;
+    private Vector3 positionOfPsevdoCollide;
 
     void Awake() {
         lr = GetComponent<LineRenderer>();
     }
 
     void Update() {
-        if (Input.GetMouseButtonDown(0)) {
+        positionOfPsevdoCollide = new Vector3(player.position.x, player.position.y+2.5f, player.position.z);
+        // if (Physics.Raycast(camera.position, camera.forward, out checkForCollide, 1, whatIsGrappleable) || 
+        // Physics.Raycast(camera.position, -camera.forward, out checkForCollide, 1, whatIsGrappleable) ||
+        // Physics.Raycast(camera.position, camera.right, out checkForCollide, 1, whatIsGrappleable) || 
+        // Physics.Raycast(camera.position, -camera.right, out checkForCollide, 1, whatIsGrappleable)) {
+            if (Physics.Raycast(player.position, player.forward, out checkForCollide, 0.5f, whatIsGrappleable) || 
+        Physics.Raycast(player.position, player.forward, out checkForCollide, 0.5f, whatIsGrappleable)){
+                isNearCollide = true; 
+        } 
+        if (Input.GetMouseButtonDown(0) ) {
+            // if (!Physics.Raycast(camera.position, camera.forward, out checkForCollide, 10, whatIsGrappleable)) {
+            //     StartGrapple();
+            //     isNearCollide == true; 
+            // }
             StartGrapple();
+            
+            
         }
-        else if (Input.GetMouseButtonUp(0)) {
+        else if (Input.GetMouseButtonUp(0) || isNearCollide == true) {
             StopGrapple();
+            isNearCollide = false;
         }
-        Debug.DrawRay(camera.position,camera.forward, Color.red);
+        Debug.DrawRay( positionOfPsevdoCollide,player.forward, Color.red);
+        Debug.DrawRay( positionOfPsevdoCollide, -player.forward, Color.red);
+
     }
 
     //Called after Update
@@ -46,7 +68,7 @@ public class GrapplingGun : MonoBehaviour {
             playerRB = attachPlayerTwice.GetComponent<Rigidbody>();
             playerMV = attachPlayerTwice.GetComponent<PlayerMovement>();
             playerMV.enabled = false;
-            playerRB.mass = 10;
+            playerRB.mass = 100;
             playerRB.freezeRotation = true;
             Debug.DrawLine(camera.position, hit.point);
             grapplePoint = hit.point;
@@ -61,12 +83,12 @@ public class GrapplingGun : MonoBehaviour {
             joint.minDistance = distanceFromPoint * 0.18f;
 
             //Adjust these values to fit your game.
-            joint.spring = 10f;
-            joint.damper = 14f;
-            joint.massScale = 4.5f;
-            // joint.spring = 100f;
-            // joint.damper = 100f;
+            // joint.spring = 20f;
+            // joint.damper = 20f;
             // joint.massScale = 4.5f;
+            joint.spring = 20f;
+            joint.damper = 20f;
+            joint.massScale = 4.5f;
 
             lr.positionCount = 2;
             currentGrapplePosition = gunTip.position;
