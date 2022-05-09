@@ -23,13 +23,13 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _AdditionalPower: 3.4
+    - _AdditionalPower: 3.44
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _CloudNoise: 20
-    - _FresnelPower: 27.85
-    - _PushOut: 4.2
-    - _ScrollSpeed: 0.1
+    - _CloudNoise: 15
+    - _FresnelPower: 13.56
+    - _PushOut: 1.5
+    - _ScrollSpeed: 0.05
     m_Colors: []
   m_BuildTextureStacks: []
 --- !u!114 &6592717622796266078

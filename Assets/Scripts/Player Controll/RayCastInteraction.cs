@@ -10,6 +10,7 @@ public class RayCastInteraction : MonoBehaviour
     [SerializeField] private TMP_Text pressFText;
     [SerializeField] private List<GameObject> gameObjectTypeArray = new();
 
+
     private GameObject gameObjectType;
     private bool isPlayerEnter = false;
 
@@ -54,9 +55,9 @@ public class RayCastInteraction : MonoBehaviour
     {
         foreach ( GameObject type in gameObjectTypeArray)
         {
-            if (hit.collider.gameObject == type)
+            if (hit.collider.gameObject.name == type.name)
             {
-                gameObjectType = type;
+                gameObjectType = hit.collider.gameObject;
             }
             else { gameObjectType = null; }
         }
@@ -71,6 +72,11 @@ public class RayCastInteraction : MonoBehaviour
                     TakeControll wheel = new TakeControll();
                     wheel.EnterInWheel(isPlayerEnter);
                     isPlayerEnter = !isPlayerEnter;
+                    break;
+                case "WoodLog":
+                    GameObject ship = GameObject.Find("Ship Controller");
+                    ship.GetComponent<ResourcesCount>().woodCount += 1;
+                    Destroy(gameObjectType);
                     break;
             }
         }

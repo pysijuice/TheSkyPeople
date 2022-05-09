@@ -9,6 +9,7 @@ TagManager:
   - AirShip
   - Portal
   - Enemy
+  - Tree
   layers:
   - Default
   - TransparentFX
