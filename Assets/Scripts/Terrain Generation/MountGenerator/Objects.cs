@@ -6,6 +6,8 @@ public class Objects : MonoBehaviour
 {   
     
     private IEnumerator coroutine;
+    public GameObject[] islandPrefabs;
+    GameObject island;
     void Start()
     {
         coroutine = checkCollide(0.5f);
@@ -14,16 +16,27 @@ public class Objects : MonoBehaviour
     IEnumerator checkCollide(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
-        float objectY = Random.Range(50,99);
+        // float objectY = Random.Range(50,99);
+        float coordY = Random.Range(30,140);
+        transform.position = new Vector3(transform.position.x, coordY, transform.position.z);
         RaycastHit hit;
-        // if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit, Mathf.Infinity))
-        if (Physics.Raycast(transform.position, -Vector3.up, out hit, Mathf.Infinity) && !(Physics.Raycast(transform.position, -Vector3.up, out hit, 48.0f))
-        && !(Physics.Raycast(transform.position, -Vector3.right, out hit, 80.0f)) && !(Physics.Raycast(transform.position, Vector3.right, out hit, 80.0f))
-        &&  !(Physics.Raycast(transform.position, -Vector3.forward, out hit, 80.0f)) &&  !(Physics.Raycast(transform.position, Vector3.forward, out hit, 80.0f)))
+        // if (Physics.Raycast(transform.position, -Vector3.up, out hit, Mathf.Infinity) && !(Physics.Raycast(transform.position, -Vector3.up, out hit, 48.0f))
+        // && !(Physics.Raycast(transform.position, -Vector3.right, out hit, 80.0f)) && !(Physics.Raycast(transform.position, Vector3.right, out hit, 80.0f))
+        // &&  !(Physics.Raycast(transform.position, -Vector3.forward, out hit, 80.0f)) &&  !(Physics.Raycast(transform.position, Vector3.forward, out hit, 80.0f)))
+        if (Physics.Raycast(transform.position, -Vector3.up, out hit, Mathf.Infinity) && !(Physics.Raycast(transform.position, -Vector3.up, out hit, 30.0f))
+        && !(Physics.Raycast(transform.position, -Vector3.right, out hit, 70.0f)) && !(Physics.Raycast(transform.position, Vector3.right, out hit, 70.0f))
+        &&  !(Physics.Raycast(transform.position, -Vector3.forward, out hit, 70.0f)) &&  !(Physics.Raycast(transform.position, Vector3.forward, out hit, 70.0f)))
         {
             // Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.up) * 1000, Color.green,100);
-            float coordY = Random.Range(50,600);
-            transform.position = new Vector3(transform.position.x, coordY, transform.position.z);
+            // float coordY = Random.Range(50,600);
+            // transform.position = new Vector3(transform.position.x, coordY, transform.position.z);
+            int rad = Random.Range(0,islandPrefabs.Length); 
+            float rotateY = Random.Range(0,360);
+            Quaternion rotation = Quaternion.Euler(0,rotateY,0);
+            island = GameObject.Instantiate(islandPrefabs[rad],transform.position, rotation);
+            Destroy(transform.gameObject);
+
+
             
             // Debug.Log("Did Hit " + transform.position);
         }

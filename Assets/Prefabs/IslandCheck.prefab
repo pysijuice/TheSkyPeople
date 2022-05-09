@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8525979809015338283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8525979809015338285}
+  - component: {fileID: 8525979809015338284}
+  - component: {fileID: -7036394134491540505}
+  m_Layer: 0
+  m_Name: IslandCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8525979809015338285
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8525979809015338283}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.33613747, y: 44.38568, z: 16.915504}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8525979809015338284
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8525979809015338283}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 70, y: 70, z: 70}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-7036394134491540505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8525979809015338283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc370bb33daf4244f9e814fba9c47d90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  islandPrefabs:
+  - {fileID: 6530287475575999352, guid: 96b729964ab731f4b9f55e2c31e202ab, type: 3}
+  - {fileID: 7288737057512683009, guid: aec568c7d944b6544b16d22b32beb632, type: 3}
+  - {fileID: 5797127069240506528, guid: 8e8d7c857cd81274194c92365c4b4d4e, type: 3}
+  - {fileID: 971380752571979899, guid: 91c7a5713e8336c429c20430cb7f1f26, type: 3}
+  - {fileID: 1019910339125822932, guid: 8b3b78f5852342f4280d701ae258129b, type: 3}
+  - {fileID: 8086380921976848841, guid: 1c1c0a69b777ef6489a84935f9a9cd19, type: 3}
+  - {fileID: 3764719032253226749, guid: 3a1fee63669ea2a46a413f0c4ae60065, type: 3}
+  - {fileID: 323852237026087056, guid: 4ca2ee6618ea7eb4ca8cf4f4b44c8e5f, type: 3}
