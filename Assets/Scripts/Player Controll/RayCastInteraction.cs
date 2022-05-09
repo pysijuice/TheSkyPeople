@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class RayCastInteraction : MonoBehaviour
 {
@@ -28,9 +29,11 @@ public class RayCastInteraction : MonoBehaviour
         {
             if (hit.collider.gameObject.GetComponent<Interactable>() != null)
             {
+
                 FText(true);
                 TypeOfItem(hit);
                 Interaction();
+                gameObjectType = null;
             }
             else
             {
@@ -58,8 +61,8 @@ public class RayCastInteraction : MonoBehaviour
             if (hit.collider.gameObject.name == type.name)
             {
                 gameObjectType = hit.collider.gameObject;
+                Debug.Log(gameObjectType.name);
             }
-            else { gameObjectType = null; }
         }
     }
     void Interaction()
@@ -77,6 +80,9 @@ public class RayCastInteraction : MonoBehaviour
                     GameObject ship = GameObject.Find("Ship Controller");
                     ship.GetComponent<ResourcesCount>().woodCount += 1;
                     Destroy(gameObjectType);
+                    break;
+                case "WheelToNewArea":
+                    SceneManager.LoadScene("Scene");
                     break;
             }
         }
