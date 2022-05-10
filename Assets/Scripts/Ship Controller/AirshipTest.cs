@@ -79,7 +79,8 @@ public class AirshipTest : MonoBehaviour
         var forceDirection = transform.forward;
         var forward = Vector3.Scale(new Vector3(1, 1, 1), -transform.right);
         //upDown
-        transform.Rotate(new Vector3(0, 0, Time.deltaTime * upDownInput * 100 / upDownCoef), Space.Self);
+        // transform.Rotate(new Vector3(0, 0, Time.deltaTime * upDownInput * 100 / upDownCoef), Space.Self);
+        Rigidbody.AddForce(new Vector3(0,1,0) * upDownInput * upDownCoef, ForceMode.Force);
 
         // //leftRight
 
@@ -95,23 +96,6 @@ public class AirshipTest : MonoBehaviour
         Rigidbody.AddForce(-brakeInput * 5 * Rigidbody.velocity);
         Rigidbody.AddForce(-0.7f * Rigidbody.velocity);
 
-        if (transform.eulerAngles.x < 180)
-        {
-            if (transform.eulerAngles.x > 25)
-            {
-                transform.Rotate(-transform.right * rotationSpeed * Time.deltaTime * passiveCrenCoef * 5, Space.World);
-            }
-            transform.Rotate(transform.right * rotationSpeed * Time.deltaTime * -1 * passiveCrenCoef, Space.World);
-        }
-        else if (transform.eulerAngles.x > 180)
-        {
-            if (transform.eulerAngles.x < 25)
-            {
-                transform.Rotate(transform.right * rotationSpeed * Time.deltaTime * passiveCrenCoef * 5, Space.World);
-            }
-            transform.Rotate(transform.right * rotationSpeed * Time.deltaTime * passiveCrenCoef, Space.World);
-
-        }
 
     }
 

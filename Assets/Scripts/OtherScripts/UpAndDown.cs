@@ -9,9 +9,14 @@ public class UpAndDown : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float amplitude;
     [SerializeField] float defaultYObjectPosition;
-
+    void Start(){
+        defaultYObjectPosition = transform.position.y;
+        speed = Random.Range(0,0.3f);
+        amplitude = Random.Range(5,20);
+    }
     void Update()
     {
+        
         ChangePosition();
     }
 
