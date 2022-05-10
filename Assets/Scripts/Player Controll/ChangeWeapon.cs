@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChangeWeapon : MonoBehaviour
 {
-    // 0 - axe, 1 - graplingGun
+    // 0 - axe, 1 - graplingGun, 2 - hammer
     [SerializeField] GameObject[] weaponType;
 
     void Update()
@@ -15,7 +15,11 @@ public class ChangeWeapon : MonoBehaviour
         } else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             SwitchWeapon(1);
-        } else if (Input.GetKeyDown(KeyCode.Z)) // Kostil' dlya ybiraniya orygia
+            
+        } else if ((Input.GetKeyDown(KeyCode.Alpha3)))
+        {
+            SwitchWeapon(2);
+        }else if (Input.GetKeyDown(KeyCode.Z)) // Kostil' dlya ybiraniya orygia
         {
             for (int i = 0; i < weaponType.Length; i++)
             {

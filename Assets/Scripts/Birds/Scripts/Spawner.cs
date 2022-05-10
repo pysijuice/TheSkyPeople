@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Spawner : MonoBehaviour {
 
@@ -13,13 +15,35 @@ public class Spawner : MonoBehaviour {
     public GizmoType showSpawnRegion;
 
     void Awake () {
-        for (int i = 0; i < spawnCount; i++) {
+        /*for (int i = 0; i < spawnCount; i++) {
             Vector3 pos = transform.position + Random.insideUnitSphere * spawnRadius;
             Boid boid = Instantiate (prefab);
             boid.transform.position = pos;
             boid.transform.forward = Random.insideUnitSphere;
 
             boid.SetColour (colour);
+        }*/
+
+        StartCoroutine(SpawnBirds());
+    }
+
+ 
+
+    IEnumerator SpawnBirds()
+    {
+        while (true)
+        {
+            for (int i = 0; i < spawnCount; i++)
+            {
+                Vector3 pos = transform.position + Random.insideUnitSphere * spawnRadius;
+                Boid boid = Instantiate(prefab);
+                boid.transform.position = pos;
+                boid.transform.forward = Random.insideUnitSphere;
+
+                boid.SetColour(colour);
+            }
+
+            yield return new WaitForSeconds(5f);
         }
     }
 
