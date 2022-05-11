@@ -23,7 +23,7 @@ public class AirshipTest : MonoBehaviour
 
 
 
-    private float moveForward = 0;
+    public float moveForward = 0;
 
     //use Componets
     protected Rigidbody Rigidbody;
