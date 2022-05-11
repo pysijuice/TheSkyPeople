@@ -61,7 +61,7 @@ public class RayCastInteraction : MonoBehaviour
             if (hit.collider.gameObject.name == type.name)
             {
                 gameObjectType = hit.collider.gameObject;
-                Debug.Log(gameObjectType.name);
+                // Debug.Log(gameObjectType.name);
             }
         }
     }

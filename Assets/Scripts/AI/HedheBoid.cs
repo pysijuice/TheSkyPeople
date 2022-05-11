@@ -1,8 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boid : MonoBehaviour {
+public class HedheBoid : MonoBehaviour {
 
     BoidSettings settings;
 
@@ -24,6 +24,10 @@ public class Boid : MonoBehaviour {
     [HideInInspector]
     public int numPerceivedFlockmates;
 
+    public HedheBoidManager hedheManager;
+    private AddNewHedhedogToBoid newHedhedog;
+
+
     // Cached
     Material material;
     Transform cachedTransform;
@@ -32,11 +36,24 @@ public class Boid : MonoBehaviour {
     void Awake () {
         material = transform.GetComponentInChildren<MeshRenderer> ().material;
         cachedTransform = transform;
+        
+
+    }
+
+    void Start(){
+        hedheManager = FindObjectOfType<HedheBoidManager>();
+        Initialize(hedheManager.addSettings(),hedheManager.addTarget());
+
+        newHedhedog = GetComponent<AddNewHedhedogToBoid>();
+        newHedhedog.newHedhedog();
+
     }
 
     public void Initialize (BoidSettings settings, Transform target) {
         this.target = target;
         this.settings = settings;
+        Debug.Log(settings.minSpeed);
+        
         
 
         position = cachedTransform.position;
@@ -58,6 +75,7 @@ public class Boid : MonoBehaviour {
         if (target != null) {
             Vector3 offsetToTarget = (target.position - position);
             acceleration = SteerTowards (offsetToTarget) * settings.targetWeight;
+            
         }
 
         if (numPerceivedFlockmates != 0) {
