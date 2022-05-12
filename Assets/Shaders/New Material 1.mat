@@ -89,12 +89,12 @@ Material:
     - _NoiseScale: 0.064
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Reflectivity: 0.6
+    - _Reflectivity: 0.76
     - _RimPower: 9.4
     - _SmoothnessTextureChannel: 0
     - _Softness: 0.021
     - _SpecularHighlights: 1
-    - _SpeedV: 10
+    - _SpeedV: 3.2
     - _SrcBlend: 1
     - _Stretch: 1.95
     - _TopScale: 0.15
