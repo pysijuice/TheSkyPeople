@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="305eb077-6b76-4d46-8db1-8883c6db13f8" name="Changes" comment="" />
+    <list default="true" id="305eb077-6b76-4d46-8db1-8883c6db13f8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LowPoly0.2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LowPoly0.2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OtherScripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OtherScripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player Controll/ChangeWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player Controll/ChangeWeapon.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,6 +72,7 @@
       <workItem from="1652177752021" duration="5177000" />
       <workItem from="1652196222701" duration="533000" />
       <workItem from="1652256757350" duration="11013000" />
+      <workItem from="1652287910065" duration="1552000" />
     </task>
     <servers />
   </component>

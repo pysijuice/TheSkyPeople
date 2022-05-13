@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class ChangeWeapon : MonoBehaviour
 {
     // 0 - axe, 1 - graplingGun, 2 - hammer
     [SerializeField] GameObject[] weaponType;
+    [SerializeField] private Image Weapon1;
+    [SerializeField] private Image Weapon2;
+    [SerializeField] private Image Weapon3;
+    [SerializeField] private Image Weapon4;
 
     void Update()
     {

@@ -25,14 +25,14 @@ public class GameManager : MonoBehaviour
         {
             alpha += 0.01f;
             levelNameText.alpha = alpha;
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.005f);
         }
-
+        yield return new WaitForSeconds(2f);
         while (alpha != 0)
         {
             alpha -= 0.01f;
             levelNameText.alpha = alpha;
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.005f);
         }
     }
 }
