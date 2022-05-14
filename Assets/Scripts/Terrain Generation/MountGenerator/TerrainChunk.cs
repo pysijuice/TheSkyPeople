@@ -15,6 +15,7 @@ public class TerrainChunk {
 	MeshCollider meshCollider;
 	//trash
 	GameObject meshChild;
+	GameObject cloudPlane;
 	GameObject[] islandPrefabs;
 	
 	//end of trash
@@ -58,6 +59,8 @@ public class TerrainChunk {
 		// meshChild = GameObject.Instantiate(islandPrefabs[0],new Vector3(position.x,50,position.y), new Quaternion(0,0,0,0));
 		// meshChild.transform.parent = meshObject.transform;
 		GenerateIslands(position.x,position.y,meshSettings.meshWorldSize);
+		cloudPlane = GameObject.Instantiate(islandPrefabs[1], new Vector3(position.x, 0, position.y), new Quaternion(0,0,0,0));
+		cloudPlane.transform.parent = meshObject.transform;
 		meshObject.transform.parent = parent;
 		SetVisible(false);
 
@@ -77,8 +80,8 @@ public class TerrainChunk {
 	public void GenerateIslands(float chunkX, float chunkY, float size){
 		for (float x = chunkX-size/2; x < chunkX+size/2; x+= size/5){
 			for (float y = chunkY-size/2; y < chunkY+size/2; y+= size/5){
-				int rad = Random.Range(0,islandPrefabs.Length); 
-				meshChild = GameObject.Instantiate(islandPrefabs[rad],new Vector3(x,50,y), new Quaternion(0,0,0,0));
+				
+				meshChild = GameObject.Instantiate(islandPrefabs[0],new Vector3(x,50,y), new Quaternion(0,0,0,0));
 				meshChild.transform.parent = meshObject.transform;
 			}
 		}

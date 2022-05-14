@@ -2383,9 +2383,9 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.25055456161499026,
-        "g": 0.801886796951294,
-        "b": 0.16264685988426209,
+        "r": 0.8207547068595886,
+        "g": 0.4774487018585205,
+        "b": 0.16647383570671082,
         "a": 0.0
     },
     "isMainColor": false,
@@ -3523,7 +3523,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Scale",
     "m_StageCapability": 3,
-    "m_Value": 8.0,
+    "m_Value": 3.0,
     "m_DefaultValue": 500.0,
     "m_Labels": []
 }

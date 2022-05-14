@@ -312,16 +312,7 @@ MonoBehaviour:
   - {fileID: 1265965087}
   - {fileID: 2046651818}
   treePrefabs:
-  - {fileID: 65750434517443597, guid: 4498465a88b148d4282eaabd26c6a1cc, type: 3}
-  - {fileID: 7503234775952869472, guid: 5f24aa6ab9dcbf34a8f7fe3d2d7101e3, type: 3}
-  - {fileID: 4791635035383546924, guid: 047f1c08c118adb44afc2f7a5546d961, type: 3}
-  - {fileID: 3533222238560471729, guid: 115e187ed5e52c342be3a11a5bb026e4, type: 3}
-  - {fileID: 3283319247295682756, guid: 215a837eb16a72c46ba3bec824295908, type: 3}
-  - {fileID: 3415756251800528271, guid: c052e1ff92134f742bb2118a9b1009c7, type: 3}
-  - {fileID: 8510528051430356585, guid: b5ab3c445530f1748a7d8b9652ca8464, type: 3}
-  - {fileID: 4211190833502440943, guid: eeb6fb5e41834354ca34c25799abdb83, type: 3}
-  - {fileID: 3441463434438125508, guid: 37991ae23e12e7c4e9ec868718e49178, type: 3}
-  - {fileID: 7463354569231511596, guid: 22e6aa99b025ff548ae81b4e1ff79819, type: 3}
+  - {fileID: 3820556979068697437, guid: 5754c3e93992fcf44bb30507d5d6cedf, type: 3}
 --- !u!114 &919132148240319005
 MonoBehaviour:
   m_ObjectHideFlags: 0

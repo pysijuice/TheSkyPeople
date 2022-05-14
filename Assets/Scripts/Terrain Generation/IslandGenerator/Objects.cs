@@ -34,6 +34,7 @@ public class Objects : MonoBehaviour
                 Quaternion rotation = Quaternion.Euler(0,rotateY,0);
 
                 island = GameObject.Instantiate(islandPrefabs[rad],transform.position, rotation);
+                island.transform.parent = gameObject.transform.parent;
             }
             Destroy(transform.gameObject);
 
