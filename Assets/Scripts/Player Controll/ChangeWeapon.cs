@@ -18,13 +18,21 @@ public class ChangeWeapon : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SwitchWeapon(0);
-        } else if (Input.GetKeyDown(KeyCode.Alpha2))
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             SwitchWeapon(1);
-            
-        } else if ((Input.GetKeyDown(KeyCode.Alpha3)))
+
+        }
+        else if ((Input.GetKeyDown(KeyCode.Alpha3)))
         {
             SwitchWeapon(2);
+
+        }
+        else if ((Input.GetKeyDown(KeyCode.Alpha4)))
+        {
+            SwitchWeapon(3);
+
         }else if (Input.GetKeyDown(KeyCode.Z)) // Kostil' dlya ybiraniya orygia
         {
             for (int i = 0; i < weaponType.Length; i++)
