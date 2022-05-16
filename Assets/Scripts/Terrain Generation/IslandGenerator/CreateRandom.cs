@@ -18,7 +18,18 @@ public class CreateRandom : MonoBehaviour
             // int randomTree = Random.Range(0,treePrefabs.Count);
 
             // PositionRaycast(treePrefabs[Random.Range(0,treePrefabs.Count)]);
-            PositionRaycast(goToSpawn);
+            // PositionRaycast(goToSpawn);
+
+
+            float randomScale = Random.Range(0.9f, 1.3f);
+            scaleChange = new Vector3(randomScale, randomScale, randomScale);
+            float rotateY = Random.Range(0,360);
+            // Quaternion spawnRotation = Quaternion.FromToRotation(Vector3.up, hit.normal);
+            GameObject tree = Instantiate(treePrefabs[Random.Range(0,treePrefabs.Count)], goToSpawn.transform.position, 
+            Quaternion.identity);
+            tree.transform.Rotate(0f,rotateY,0f);
+            tree.transform.localScale = scaleChange;
+            tree.transform.parent = gameObject.transform;
             // Instantiate(treePrefabs[Random.Range(0,treePrefabs.Count)], goToSpawn.transform.position, 
             // Quaternion.identity);
             Destroy(goToSpawn);
