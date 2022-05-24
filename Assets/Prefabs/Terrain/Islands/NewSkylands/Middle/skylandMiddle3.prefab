@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 1611573410}
   - component: {fileID: 1611573408}
   - component: {fileID: 1611573409}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: skylandMiddle3
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2009,7 +2009,7 @@ MonoBehaviour:
   m_SkinMeshRef: {fileID: 0}
   m_OriginalMeshObject: {fileID: -2228417370725966487, guid: 6eb9646439dbc3e4790da059d9a1129d,
     type: 3}
-  m_Mode: 0
+  m_Mode: 1
 --- !u!1001 &6505880157185875260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2076,6 +2076,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UpSpawner(Polybrush Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723732524557620405, guid: d96195a5dddacbf41ae003a520b24bc6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d96195a5dddacbf41ae003a520b24bc6, type: 3}
@@ -2168,6 +2173,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UpSpawner(Polybrush Clone)
       objectReference: {fileID: 0}
+    - target: {fileID: 4723732524557620405, guid: d96195a5dddacbf41ae003a520b24bc6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d96195a5dddacbf41ae003a520b24bc6, type: 3}
 --- !u!4 &2001733746950399777 stripped
@@ -2259,6 +2269,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UpSpawner(Polybrush Clone)
       objectReference: {fileID: 0}
+    - target: {fileID: 4723732524557620405, guid: d96195a5dddacbf41ae003a520b24bc6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d96195a5dddacbf41ae003a520b24bc6, type: 3}
 --- !u!4 &2001733746198036842 stripped
@@ -2339,6 +2354,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UpSpawner(Polybrush Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723732524557620405, guid: d96195a5dddacbf41ae003a520b24bc6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d96195a5dddacbf41ae003a520b24bc6, type: 3}

@@ -23,6 +23,11 @@ public class UpGenerator : MonoBehaviour
             upSpawn.Remove(newUp);
             Destroy(newUp);
         }
+        
+        for (int i = 0; i < upSpawn.Count; i++){
+            GameObject newUp = upSpawn[i];
+            Destroy(newUp);
+        }
     }
 
     // Update is called once per frame

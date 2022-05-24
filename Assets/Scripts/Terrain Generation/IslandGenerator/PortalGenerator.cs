@@ -19,7 +19,7 @@ public class PortalGenerator : MonoBehaviour
         yield return new WaitForSeconds(5);
 
         islands = GameObject.FindGameObjectsWithTag("Island");
-        // Debug.Log(islands.Length);
+        Debug.Log(islands.Length);
 
         int number = Random.Range(0, islands.Length);
         Instantiate(portal, islands[number].transform.position, islands[number].transform.rotation);;

@@ -47,7 +47,7 @@ public class TerrainGenerator : MonoBehaviour {
 		
 		meshWorldSize = meshSettings.meshWorldSize;
 		chunksVisibleInViewDst = Mathf.RoundToInt(maxViewDst / meshWorldSize);
-		chunksVisibleInViewDst += 1;
+		// chunksVisibleInViewDst += 1;
 
 
 		seed = Random.Range(-10000,10000);
@@ -58,18 +58,18 @@ public class TerrainGenerator : MonoBehaviour {
 	}
 
 	void Update() {
-		viewerPosition = new Vector2 (viewer.position.x, viewer.position.z);
+		// viewerPosition = new Vector2 (viewer.position.x, viewer.position.z);
 
-		if (viewerPosition != viewerPositionOld) {
-			foreach (TerrainChunk chunk in visibleTerrainChunks) {
-				chunk.UpdateCollisionMesh ();
-			}
-		}
+		// if (viewerPosition != viewerPositionOld) {
+		// 	foreach (TerrainChunk chunk in visibleTerrainChunks) {
+		// 		chunk.UpdateCollisionMesh ();
+		// 	}
+		// }
 
-		if ((viewerPositionOld - viewerPosition).sqrMagnitude > sqrViewerMoveThresholdForChunkUpdate) {
-			viewerPositionOld = viewerPosition;
-			UpdateVisibleChunks ();
-		}
+		// if ((viewerPositionOld - viewerPosition).sqrMagnitude > sqrViewerMoveThresholdForChunkUpdate) {
+		// 	viewerPositionOld = viewerPosition;
+		// 	UpdateVisibleChunks ();
+		// }
 	}
 	
 	
@@ -105,7 +105,7 @@ public class TerrainGenerator : MonoBehaviour {
 
 	void OnTerrainChunkVisibilityChanged(TerrainChunk chunk, bool isVisible) {
 		if (isVisible) {
-			visibleTerrainChunks.Add (chunk);
+			visibleTerrainChunks.Add (chunk);	
 		} else {
 			visibleTerrainChunks.Remove (chunk);
 		}
