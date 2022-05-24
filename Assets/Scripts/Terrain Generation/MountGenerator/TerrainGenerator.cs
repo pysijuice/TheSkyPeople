@@ -15,7 +15,7 @@ public class TerrainGenerator : MonoBehaviour {
 	public HeightMapSettings heightMapSettings;
 	public TextureData textureSettings;
 	//trash
-
+	private bool startOfTheGame = true;
 	// public TextureData textureSettingsTest;
 	//end of trash
 
@@ -47,11 +47,13 @@ public class TerrainGenerator : MonoBehaviour {
 		
 		meshWorldSize = meshSettings.meshWorldSize;
 		chunksVisibleInViewDst = Mathf.RoundToInt(maxViewDst / meshWorldSize);
-
+		chunksVisibleInViewDst += 1;
 
 
 		seed = Random.Range(-10000,10000);
 		UpdateVisibleChunks ();
+		startOfTheGame = false;
+		// chunksVisibleInViewDst -= 1;
 		
 	}
 
@@ -89,7 +91,7 @@ public class TerrainGenerator : MonoBehaviour {
 				if (!alreadyUpdatedChunkCoords.Contains (viewedChunkCoord)) {
 					if (terrainChunkDictionary.ContainsKey (viewedChunkCoord)) {
 						terrainChunkDictionary [viewedChunkCoord].UpdateTerrainChunk ();
-					} else {
+					} else if (startOfTheGame){
 						TerrainChunk newChunk = new TerrainChunk (viewedChunkCoord,heightMapSettings,meshSettings, detailLevels, colliderLODIndex, transform, viewer, mapMaterial,seed);
 						terrainChunkDictionary.Add (viewedChunkCoord, newChunk);
 						newChunk.onVisibilityChanged += OnTerrainChunkVisibilityChanged;

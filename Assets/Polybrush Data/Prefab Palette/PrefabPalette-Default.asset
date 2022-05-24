@@ -16,13 +16,13 @@ MonoBehaviour:
   - gameObject: {fileID: 6388205176583946858, guid: 7948c06a51e731a48b83b0591a0234fb,
       type: 3}
     settings:
-      m_Strength: 48.420166
+      m_Strength: 66
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
-      m_RotationRangeMax: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 8.4375, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
       m_ScaleRangeMax: {x: 1, y: 1, z: 1}
-      m_UniformScale: {x: 1, y: 1}
-      m_UniformBool: 0
+      m_UniformScale: {x: 0, y: 0.5263158}
+      m_UniformBool: 1
       m_XRotationBool: 0
       m_YRotationBool: 0
       m_ZRotationBool: 0
@@ -53,6 +53,23 @@ MonoBehaviour:
       m_Strength: 50
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
+      m_ScaleRangeMin: {x: 0.602649, y: 0.602649, z: 0.66887414}
+      m_ScaleRangeMax: {x: 0.6688743, y: 0.8013245, z: 0.86754966}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 0
+      m_YRotationBool: 0
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 0
+    name: Treespawn
+  - gameObject: {fileID: 4723732524557620405, guid: d96195a5dddacbf41ae003a520b24bc6,
+      type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
       m_ScaleRangeMax: {x: 1, y: 1, z: 1}
       m_UniformScale: {x: 1, y: 1}
@@ -63,4 +80,21 @@ MonoBehaviour:
       m_XScaleBool: 0
       m_YScaleBool: 0
       m_ZScaleBool: 0
-    name: Treespawn
+    name: UpSpawner
+  - gameObject: {fileID: 1357349340618697539, guid: 72e7bb0f13760be4fb777839aaa83213,
+      type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 0, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 0
+      m_YRotationBool: 0
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 0
+    name: BuildSpawn
