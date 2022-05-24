@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4021206162843262531}
   - component: {fileID: 3979604217753087194}
+  - component: {fileID: -6630472268314355171}
+  - component: {fileID: -9117363592437724668}
   m_Layer: 0
   m_Name: PrettyTree
-  m_TagString: Untagged
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,6 +67,36 @@ LODGroup:
     - renderer: {fileID: 8546973936367615926}
     - renderer: {fileID: 8030415168337203659}
   m_Enabled: 1
+--- !u!114 &-6630472268314355171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3820556979068697437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e64f2d72611fd04db6b857251ec5caf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treeHp: 50
+  SpawnWoods:
+  - {fileID: 8481885391855173646, guid: 574699d39faba11419c8495f69837ab8, type: 3}
+  - {fileID: 8481885391855173646, guid: 574699d39faba11419c8495f69837ab8, type: 3}
+  - {fileID: 8481885391855173646, guid: 574699d39faba11419c8495f69837ab8, type: 3}
+--- !u!65 &-9117363592437724668
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3820556979068697437}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1357738, y: 21.807955, z: 1.1353171}
+  m_Center: {x: 0.06788725, y: 10.403978, z: -0.06765858}
 --- !u!1001 &549545306891988918
 PrefabInstance:
   m_ObjectHideFlags: 0
