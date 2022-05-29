@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1611573410}
   - component: {fileID: 1611573408}
   - component: {fileID: 1611573409}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: skylandMiddle3
   m_TagString: Island
   m_Icon: {fileID: 0}
@@ -122,10 +122,10 @@ MonoBehaviour:
   - {fileID: 2001733746950399781}
   - {fileID: 2001733746723965321}
   upPrefabs:
-  - {fileID: 5334752211153793029, guid: 14d7d82396b3e8945b66a39d598d9807, type: 3}
-  - {fileID: 1241944659134640320, guid: 1f32b937bbf58404983e280cf14773bf, type: 3}
-  - {fileID: 9106979500827219975, guid: 9dff39d732735a24b91f5d83cabb494e, type: 3}
-  - {fileID: 6650512388897741649, guid: c59e57e80eba7d8449b360c967a429be, type: 3}
+  - {fileID: 2831189430621228048, guid: 14d7d82396b3e8945b66a39d598d9807, type: 3}
+  - {fileID: 2366073028196338331, guid: 1f32b937bbf58404983e280cf14773bf, type: 3}
+  - {fileID: 7890142339297810756, guid: 9dff39d732735a24b91f5d83cabb494e, type: 3}
+  - {fileID: 5546238311885561411, guid: c59e57e80eba7d8449b360c967a429be, type: 3}
   hillsCount: 2
 --- !u!114 &1611573409
 MonoBehaviour:
@@ -2080,7 +2080,7 @@ PrefabInstance:
     - target: {fileID: 4723732524557620405, guid: d96195a5dddacbf41ae003a520b24bc6,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d96195a5dddacbf41ae003a520b24bc6, type: 3}
@@ -2176,7 +2176,7 @@ PrefabInstance:
     - target: {fileID: 4723732524557620405, guid: d96195a5dddacbf41ae003a520b24bc6,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d96195a5dddacbf41ae003a520b24bc6, type: 3}
@@ -2272,7 +2272,7 @@ PrefabInstance:
     - target: {fileID: 4723732524557620405, guid: d96195a5dddacbf41ae003a520b24bc6,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d96195a5dddacbf41ae003a520b24bc6, type: 3}
@@ -2358,7 +2358,7 @@ PrefabInstance:
     - target: {fileID: 4723732524557620405, guid: d96195a5dddacbf41ae003a520b24bc6,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d96195a5dddacbf41ae003a520b24bc6, type: 3}
