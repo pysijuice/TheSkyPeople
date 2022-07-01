@@ -84,9 +84,18 @@ public class RayCastInteraction : MonoBehaviour
                 case "WheelToNewArea":
                     SceneManager.LoadScene("Scene");
                     break;
+                case "Trader":
+                    transform.GetComponent<MouseLook>().enabled = false;
+                    transform.parent.GetComponent<PlayerMovement>().enabled = false;
+                    transform.parent.GetComponent<PlayerController>().enabled = false;
+                    transform.parent.Find("UI").Find("TradeMenu").gameObject.SetActive(true);
+                    Cursor.visible = true;
+                    Cursor.lockState = CursorLockMode.None;
+                    break;
             }
         }
     }
+    
 }
 
 
