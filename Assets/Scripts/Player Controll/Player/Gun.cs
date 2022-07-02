@@ -28,9 +28,9 @@ public class Gun : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, range))
         {
-            if (hit.transform.GetComponent<Enemy>() != null)
+            if (hit.transform.GetComponent<ObjectDestruction>() != null)
             {
-                hit.transform.GetComponent<Enemy>().Damage(30);
+                hit.transform.GetComponent<ObjectDestruction>().Damage(30);
             }
             
         }
