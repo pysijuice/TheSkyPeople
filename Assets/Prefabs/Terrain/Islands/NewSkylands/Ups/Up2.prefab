@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6185758820027715821
+--- !u!1 &2366073028196338331
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 15058135191505712}
-  - component: {fileID: 176657124090742457}
-  - component: {fileID: 4335941388749225634}
-  m_Layer: 0
+  - component: {fileID: 8446711618228359494}
+  - component: {fileID: 8610421287296425167}
+  - component: {fileID: 5269664038709945556}
+  m_Layer: 9
   m_Name: Up2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &15058135191505712
+--- !u!4 &8446711618228359494
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6185758820027715821}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.794502, y: -0.00000047683716, z: 7.312317}
+  m_GameObject: {fileID: 2366073028196338331}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.235756, y: 161.5, z: -0.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &176657124090742457
+--- !u!33 &8610421287296425167
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6185758820027715821}
+  m_GameObject: {fileID: 2366073028196338331}
   m_Mesh: {fileID: -4213109991439912075, guid: 983f350c8a34a904786a70561bb1ad03, type: 3}
---- !u!23 &4335941388749225634
+--- !u!23 &5269664038709945556
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6185758820027715821}
+  m_GameObject: {fileID: 2366073028196338331}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
