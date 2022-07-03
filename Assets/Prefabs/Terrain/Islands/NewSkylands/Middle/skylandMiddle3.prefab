@@ -103,7 +103,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 4300000, guid: 7fd7e56cf0bd3934ca1682a4c6264a72, type: 2}
 --- !u!114 &1611573408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,10 +122,10 @@ MonoBehaviour:
   - {fileID: 2001733746950399781}
   - {fileID: 2001733746723965321}
   upPrefabs:
-  - {fileID: 2831189430621228048, guid: 14d7d82396b3e8945b66a39d598d9807, type: 3}
-  - {fileID: 2366073028196338331, guid: 1f32b937bbf58404983e280cf14773bf, type: 3}
-  - {fileID: 7890142339297810756, guid: 9dff39d732735a24b91f5d83cabb494e, type: 3}
-  - {fileID: 5546238311885561411, guid: c59e57e80eba7d8449b360c967a429be, type: 3}
+  - {fileID: 2831189430621228048, guid: b777c90302193d94d98e26832b32b12a, type: 3}
+  - {fileID: 2366073028196338331, guid: 8913da3e353a59d49aefc80cd4a2ea21, type: 3}
+  - {fileID: 7890142339297810756, guid: 9864ef554543f4b47818bef57deb7de4, type: 3}
+  - {fileID: 5546238311885561411, guid: f65a652f9efced24fb8b58e9eddb7a75, type: 3}
   hillsCount: 2
 --- !u!114 &1611573409
 MonoBehaviour:
@@ -2009,7 +2009,7 @@ MonoBehaviour:
   m_SkinMeshRef: {fileID: 0}
   m_OriginalMeshObject: {fileID: -2228417370725966487, guid: 6eb9646439dbc3e4790da059d9a1129d,
     type: 3}
-  m_Mode: 1
+  m_Mode: 0
 --- !u!1001 &6505880157185875260
 PrefabInstance:
   m_ObjectHideFlags: 0
