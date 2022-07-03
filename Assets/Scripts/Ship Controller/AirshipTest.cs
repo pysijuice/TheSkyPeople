@@ -103,10 +103,10 @@ public class AirshipTest : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            wheelHandle.transform.Rotate(0, 0, 50 * Time.deltaTime);
+            wheelHandle.transform.Rotate(50 * Time.deltaTime, 0, 0 );
         } else if (Input.GetKey(KeyCode.D))
         {
-            wheelHandle.transform.Rotate(0, 0, -50 * Time.deltaTime);
+            wheelHandle.transform.Rotate(-50 * Time.deltaTime, 0, 0);
         }
     }
 

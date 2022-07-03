@@ -8,7 +8,7 @@ public class RotatePropeller : MonoBehaviour
 {
 
     [Header("Rotation Speed")]
-    [SerializeField] private float speedZ;
+    [SerializeField] private float speedX;
 
     [SerializeField] private GameObject shipController;
     
@@ -34,31 +34,31 @@ public class RotatePropeller : MonoBehaviour
         switch (shipSpeed)
         {
             case 0f:
-                transform.Rotate(0, 0, speedZ * 50*Time.deltaTime);
+                transform.Rotate(speedX * 50 * Time.deltaTime, 0, 0);
                 break;
             case 0.25f:
-                transform.Rotate(0, 0, speedZ * 100*Time.deltaTime);
+                transform.Rotate(speedX * 100 * Time.deltaTime, 0, 0);
                 break;
             case 0.5f:
-                transform.Rotate(0, 0, speedZ * 200*Time.deltaTime);
+                transform.Rotate(speedX * 200 * Time.deltaTime, 0, 0);
                 break;
             case 0.75f:
-                transform.Rotate(0, 0, speedZ * 300*Time.deltaTime);
+                transform.Rotate(speedX * 300 * Time.deltaTime, 0, 0);
                 break;
             case 1f:
-                transform.Rotate(0, 0, speedZ * 400*Time.deltaTime);
+                transform.Rotate(speedX * 400 * Time.deltaTime, 0, 0);
                 break;
             case -0.25f:
-                transform.Rotate(0, 0, speedZ * -100*Time.deltaTime);
+                transform.Rotate(speedX * -100 * Time.deltaTime, 0, 0);
                 break;
             case -0.5f:
-                transform.Rotate(0, 0, speedZ * -200*Time.deltaTime);
+                transform.Rotate(speedX * -200 * Time.deltaTime, 0, 0);
                 break;
             case -0.75f:
-                transform.Rotate(0, 0, speedZ * -300*Time.deltaTime);
+                transform.Rotate(speedX * -300 * Time.deltaTime, 0, 0 );
                 break;
             case -1f:
-                transform.Rotate(0, 0, speedZ * -400*Time.deltaTime);
+                transform.Rotate(speedX * -400 * Time.deltaTime, 0, 0);
                 break;
         }
     }

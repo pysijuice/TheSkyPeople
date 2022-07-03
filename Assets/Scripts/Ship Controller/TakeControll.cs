@@ -55,7 +55,7 @@ public class TakeControll
             
             player.transform.parent = wheel.transform;
             // + вектор это оффсет для  позиции относительно руля
-            player.transform.localPosition = wheel.transform.localPosition + new Vector3(0, -0.7f, -3f);
+            player.transform.position = wheel.transform.position + new Vector3(2,0,0);
             ShipController.enabled = true;
         }
         else if (Input.GetKeyDown(KeyCode.F) && isPlayerEnter)
