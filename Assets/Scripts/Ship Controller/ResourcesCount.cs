@@ -5,6 +5,7 @@ using UnityEngine;
 public class ResourcesCount : MonoBehaviour
 {
     public int woodCount;
+    public int moneyCount;
     void Start()
     {
         

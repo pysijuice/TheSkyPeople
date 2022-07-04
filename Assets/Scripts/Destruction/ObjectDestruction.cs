@@ -5,8 +5,9 @@ using UnityEngine;
 public class ObjectDestruction : MonoBehaviour
 {
     HealthSystem healthSystem = new HealthSystem(100);
-    public GameObject Desctructed;
-    public float breakForce = 1;
+    [SerializeField] GameObject Desctructed;
+    [SerializeField] GameObject item;
+    [SerializeField] float breakForce = 1;
     
     public void Damage(int damage)
     {
@@ -14,17 +15,44 @@ public class ObjectDestruction : MonoBehaviour
         Debug.Log(healthSystem.GetHealth());
         if(healthSystem.GetHealth() == 0)
         {
-            GameObject frac = Instantiate(Desctructed, transform.position, transform.rotation);
-            foreach (Rigidbody rb in frac.GetComponentsInChildren<Rigidbody>())
+            SpawnItem();
+            if (Desctructed != null)
             {
-                Vector3 force = (rb.transform.position - transform.position).normalized * breakForce;
-                rb.AddForce(force);
+                GameObject frac = Instantiate(Desctructed, transform.position, transform.rotation);
+                foreach (Rigidbody rb in frac.GetComponentsInChildren<Rigidbody>())
+                {
+
+                    Vector3 force = (rb.transform.position - transform.position).normalized * breakForce;
+                    rb.AddForce(force);
+                }
+                StartCoroutine(DeleteDestruction(frac));
             }
-            Destroy(gameObject);
+            else
+            {
+                Destroy(gameObject);
+            }
+
+
         }
     }
-      
+    private void SpawnItem()
+    {
+        Instantiate(item, transform.position, transform.rotation);
+    }
     
-    
-    
+    IEnumerator DeleteDestruction(GameObject frac)
+    {
+        gameObject.transform.localScale -= new Vector3(30, 30, 30);
+        Debug.Log("1");
+
+        yield return new WaitForSeconds(4);
+        Destroy(frac);
+        Debug.Log("2");
+        Destroy(gameObject);
+
+    }
+
+
+
+
 }

@@ -478,7 +478,7 @@ MonoBehaviour:
   crenCoef: 1
   upDownCoef: 10
   passiveCrenCoef: 1.5
-  wheelHandle: {fileID: 8702299373966778472}
+  wheelHandle: {fileID: 5056735835741479603}
   moveForward: 0
 --- !u!114 &1625571787
 MonoBehaviour:
@@ -723,9 +723,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53e6469c4399af4a8b80a0bf4ea619b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &8702299373966778472 stripped
+--- !u!1 &5056735835741479603 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 9123722628992931042, guid: 414e713e433175e40bc56b7b6b80e234,
+  m_CorrespondingSourceObject: {fileID: 4644368159018456633, guid: 414e713e433175e40bc56b7b6b80e234,
     type: 3}
   m_PrefabInstance: {fileID: 457465319203927178}
   m_PrefabAsset: {fileID: 0}

@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
         Dehydration();
       
     }
-    private void OnTriggerEnter(Collider other)
+/*    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
         {
@@ -55,14 +55,14 @@ public class PlayerController : MonoBehaviour
                 Death();
             }
         }
-    }
+    }*/
 
     
 
-    private void Death()
+    /*private void Death()
     {
         Destroy(gameObject);
-    }
+    }*/
 
     private void Hunger()
     {
