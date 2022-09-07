@@ -32,7 +32,7 @@ public class RayCastInteraction : MonoBehaviour
 
                 FText(true);
                 TypeOfItem(hit);
-                Interaction();
+                Interaction(hit);
                 gameObjectType = null;
             }
             else
@@ -65,7 +65,7 @@ public class RayCastInteraction : MonoBehaviour
             }
         }
     }
-    void Interaction()
+    void Interaction(RaycastHit hit)
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
@@ -91,6 +91,11 @@ public class RayCastInteraction : MonoBehaviour
                     transform.parent.Find("UI").Find("TradeMenu").gameObject.SetActive(true);
                     Cursor.visible = true;
                     Cursor.lockState = CursorLockMode.None;
+                    break;
+                case "ArenaSpawner":
+                    int playerID = transform.parent.gameObject.GetInstanceID();
+                    hit.transform.GetComponentInParent<ArenaSpawner>().SpawnMobs();
+
                     break;
             }
         }

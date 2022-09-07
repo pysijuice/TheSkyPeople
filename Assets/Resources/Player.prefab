@@ -10557,6 +10557,7 @@ MonoBehaviour:
   gameObjectTypeArray:
   - {fileID: 0}
   - {fileID: 8481885391855173646, guid: 574699d39faba11419c8495f69837ab8, type: 3}
+  - {fileID: 0}
 --- !u!114 &2127042580
 MonoBehaviour:
   m_ObjectHideFlags: 0

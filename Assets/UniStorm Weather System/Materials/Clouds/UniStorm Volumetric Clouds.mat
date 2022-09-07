@@ -64,7 +64,7 @@ Material:
     - EARTH_RADIUS: 6371000
     - _DetailScale: 1
     - _EnableDithering: 1
-    - _FogBlendHeight: 0.3
+    - _FogBlendHeight: 0.25
     - _FogGradient: 0.405
     - _FogGradientHeight: 0.472
     - _MaskMoon: 0
@@ -91,7 +91,7 @@ Material:
     - _uCloudsBaseScale: 1.72
     - _uCloudsBottom: 500
     - _uCloudsBottomSoftness: 0.4
-    - _uCloudsCoverage: 0.47
+    - _uCloudsCoverage: 0.473
     - _uCloudsCoverageBias: 0.02
     - _uCloudsDensity: 1
     - _uCloudsDetailScale: 1000

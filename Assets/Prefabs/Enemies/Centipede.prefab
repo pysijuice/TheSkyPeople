@@ -213,6 +213,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5117691027033019577}
+  - component: {fileID: 537035341}
+  - component: {fileID: 537035342}
+  - component: {fileID: 537035343}
   m_Layer: 0
   m_Name: Centipede
   m_TagString: Untagged
@@ -236,6 +239,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &537035341
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5117691027033019576}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.543005, y: 5.0164504, z: 20.899225}
+  m_Center: {x: -0.05836162, y: -2.0082324, z: -9.949642}
+--- !u!114 &537035342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5117691027033019576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e97ff73c8e51644b1a0f3f97d15f44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2998987189842304681, guid: 003daf204cf9bba45889698e4f51389e, type: 3}
+--- !u!195 &537035343
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5117691027033019576}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 5.13
+  m_Speed: 3
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 4.82
+  m_BaseOffset: 4.52
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &5117691027083666024
 GameObject:
   m_ObjectHideFlags: 0
